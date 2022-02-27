@@ -1,13 +1,22 @@
-// var elements = [];
-// var input = document.querySelector("#addTxt");
+var elements = [];
+var myDiv = document.querySelector(".col-lg-4");
+var input = document.querySelector("#addTxt");
+let myParagraph = document.createElement("p");
+let headingParagraph = document.createTextNode(
+  "Nothing to show here! Use 'Add to List' above to add tasks to the list."
+);
+myParagraph.appendChild(headingParagraph);
+
 window.onload = function () {
   if (JSON.parse(localStorage.getItem("elements")) != null)
     elements = JSON.parse(localStorage.getItem("elements"));
   console.log(elements);
+  myDiv.appendChild(myParagraph);
   display();
 };
 function addElement() {
   if (document.querySelector("#addTxt").value.trim() != "") {
+    myDiv.removeChild(myParagraph);
     elements.push(document.querySelector("#addTxt").value.trim());
     if (localStorage.getItem("elements") == null) {
       localStorage.setItem("elements", JSON.stringify(elements));
@@ -15,6 +24,7 @@ function addElement() {
       localStorage.setItem("elements", JSON.stringify(elements));
     }
     document.querySelector("#addTxt").value = "";
+
     display();
   } else {
     Swal.fire({

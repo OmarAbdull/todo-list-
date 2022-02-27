@@ -1,5 +1,4 @@
 div img:hover {
-  background-color: rgb(153, 148, 224);
   text-decoration: underline;
   border-radius: 3px;
   transform: scale(1.1);
@@ -55,4 +54,9 @@ div img:hover {
 }
 .element:hover {
   transform: scale(1.1);
+}
+p {
+  margin-top: -300px;
+  margin-bottom: 1rem;
+  font-family: cursive;
 }
