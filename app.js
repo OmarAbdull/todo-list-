@@ -1,5 +1,4 @@
 var elements = [];
-<<<<<<< HEAD
 var myDiv = document.querySelector(".col-lg-4");
 var input = document.querySelector("#addTxt");
 let myParagraph = document.createElement("p");
@@ -13,14 +12,6 @@ window.onload = function () {
     elements = JSON.parse(localStorage.getItem("elements"));
   console.log(elements);
   myDiv.appendChild(myParagraph);
-=======
-// var input = document.querySelector("#addTxt");
-window.onload = function () {
-  if (JSON.parse(localStorage.getItem("elements")) != null) {
-      elements = JSON.parse(localStorage.getItem("elements"));
-      console.log(elements);
-  }
->>>>>>> 514ab9437b8125233b56c232f80f8e57debdf571
   display();
 };
 function addElement() {
