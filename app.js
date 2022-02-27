@@ -1,9 +1,10 @@
-// var elements = [];
+var elements = [];
 // var input = document.querySelector("#addTxt");
 window.onload = function () {
-  if (JSON.parse(localStorage.getItem("elements")) != null)
-    elements = JSON.parse(localStorage.getItem("elements"));
-  console.log(elements);
+  if (JSON.parse(localStorage.getItem("elements")) != null) {
+      elements = JSON.parse(localStorage.getItem("elements"));
+      console.log(elements);
+  }
   display();
 };
 function addElement() {
